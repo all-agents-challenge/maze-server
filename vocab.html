@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    version="XHTML+RDFa 1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.w3.org/1999/xhtml
+                        http://www.w3.org/MarkUp/SCHEMA/xhtml-rdfa-2.xsd"
+    lang="en"
+    xml:lang="en">
+  <head>
+    <title>Maze Ontology</title>
+  </head>
+  <body>
+
+    <!-- Note that rdf, rdfs, owl, dc are well-known prefixes, see https://www.w3.org/2011/rdfa-context/rdfa-1.1 -->
+
+    <h1 about="vocab" typeof="owl:Ontology" property="rdfs:label dc:title">The Maze Ontology</h1>
+
+    <p>
+      Here, we present the terms of the Maze ontology for my RDFisation of <a href="http://amundsen.com/">Mike Amundsen</a>'s Maze API.
+      Can also be read using your favourite <a href="https://rdfa.info/">RDFa</a> reader.
+    </p>
+
+    <h2>Terms</h2>
+    <div about="vocab#maze">
+      A <a id="Maze" href="vocab#Maze" typeof="rdfs:Class" property="schema:rangeIncludes"><em property="rdfs:label">Maze</em></a>
+      is something to get lost in. A Maze is comprised of <a id="Cell" href="vocab#Cell" property="schema:domainIncludes" typeof="rdfs:Class">
+      <em property="rdfs:label">Cell</em></a>s.
+    </div>
+
+    <div id="Direction" about="vocab#Direction" property="rdfs:subClassOf" resource="rdf:Property">It may be that you can leave a cell through a door in different <a href="vocab#Direction"><em property="rdfs:label">Direction</em></a>s:</div>
+    <ul prefix="vocab: vocab#"> <!-- otherwise the relative URI in typeof does not work -->
+      <li>
+        <a id="north" href="vocab#north" typeof="rdf:Property vocab:Direction"><em property="rdfs:label">north</em></a>
+      </li>
+      <li>
+        <a id="east" href="vocab#east" typeof="rdf:Property vocab:Direction"><em property="rdfs:label">east</em></a>
+      </li>
+      <li>
+        <a id="south" href="vocab#south" typeof="rdf:Property vocab:Direction"><em property="rdfs:label">south</em></a>
+      </li>
+      <li>
+        <a id="west" href="vocab#west" typeof="rdf:Property vocab:Direction"><em property="rdfs:label">west</em></a>
+      </li>
+    </ul>
+
+  </body>
+
+</html>
