@@ -10,7 +10,7 @@ $ node app-xml.js
 ```
 Starts the server on port 1337
 
-## RDF Version
+## RDF Version (by @kaefer3000)
 ```sh
 $ node app-rdf.js
 ```
@@ -20,3 +20,5 @@ Start browsing at `http://localhost:1337/`, look around and try to get out.
 Gives you represtations of the cells in the Maze in [Turtle](https://www.w3.org/TR/turtle/).
 
 With the [RDF Browser](https://addons.mozilla.org/en-US/firefox/addon/rdf-browser), you can look around using your (Firefox) browser.
+
+_The RDF Server was created by @kaefer3000 and can be found here: https://github.com/kaefer3000/2021-02-dagstuhl_
