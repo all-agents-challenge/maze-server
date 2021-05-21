@@ -30,6 +30,7 @@ template.itemEnd = '';
 template.cellStart = '<{l}#it> a <'+maze_prefix+'Cell> ; <http://www.w3.org/2000/01/rdf-schema#label> "{t}" .';
 template.cellEnd = '';
 template.link = '<#it> <'+maze_prefix+'{d}> <{l}#it> .';
+template.wall = '<#it> <'+maze_prefix+'{d}> [ a <'+maze_prefix+'Wall> ] .';
 template.titleLink = '<#it> <'+maze_prefix+'{d}> <{l}#it> . <{l}#it> <http://www.w3.org/2000/01/rdf-schema#label> "{t}" .';
 template.error = '';
 
@@ -178,6 +179,8 @@ function showCell(req, res, maze, cell) {
         for(i=0,x=data.doors.length;i<x;i++) {
             if(data.doors[i]===0) {
                 body += template.link.replaceAll('{l}',root+maze+'/'+mov[i]).replaceAll('{d}',rel[i]);
+            } else {
+                body += template.wall.replaceAll('{d}',rel[i]);
             }
             if(data.green && data.green[i]===1) {
                 body += template.link.replaceAll('{l}',root+maze+'/'+mov[i]).replaceAll('{d}',m.signifier);
