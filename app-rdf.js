@@ -8,7 +8,7 @@ var mazes = require('./mazes.js');
 
 var port = (process.env.PORT||1337);
 var root = '';
-var maze_prefix = 'https://kaefer3000.github.com/2021-02-dagstuhl/vocab#';
+var maze_prefix = 'https://kaefer3000.github.io/2021-02-dagstuhl/vocab#';
 
 var counter = 0;
 // add support for CORS
